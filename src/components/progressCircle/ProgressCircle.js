@@ -9,7 +9,7 @@ export const ProgressCircle = ({color, percentage, remainingTime}) =>{
         <Circle color="lightgrey" />
         <Circle color={color} percentage={percent} />
       </g>
-      <Text remainingTime={remainingTime} />
+      <Text remainingTime={remainingTime} fontSize={"1.8rem"}/>
     </svg>
   )
 }

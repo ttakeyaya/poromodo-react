@@ -1,9 +1,9 @@
-import { ProgressCircle } from "./components/progressCircle/ProgressCircle";
+import { Poromodo } from "./components/promodo/Poromodo";
 
 export const App = () => {
   return(
     <div>
-      <ProgressCircle color={"steelblue"} percentage={25} remainingTime={"25:00"}/>
+      <Poromodo/>
     </div>
   )
 };

@@ -1,11 +1,11 @@
-export const Text = ({remainingTime}) => {
+export const Text = ({remainingTime, fontSize="1.5em"}) => {
   return(
     <text
-      x ="50%"
-      y ="50%"
+      x ="50%" // Align the text center***
+      y ="50%" //*** 
       dominantBaseline="central"
       textAnchor="middle"
-      fontSize={"1.5em"}
+      fontSize={fontSize}
     >
       {remainingTime}
     </text>

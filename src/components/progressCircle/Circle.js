@@ -10,9 +10,9 @@ export const Circle = ({color, percentage}) =>{
       cy="100" 
       fill="transparent" 
       stroke={strokePercentage !== circumference ? color : ""}
-      stroke-width="0.5rem" 
-      stroke-dasharray={circumference} 
-      stroke-dashoffset={percentage ? strokePercentage : 0}
+      strokeWidth="0.5rem" 
+      strokeDasharray={circumference} 
+      strokeDashoffset={percentage ? strokePercentage : 0}
       ></circle>
   );
 };
