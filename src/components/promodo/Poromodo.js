@@ -13,7 +13,7 @@ export const Poromodo = ({mins=25}) => {
     setIsPaused(true);
     countRef.current = setInterval(()=>{
       setTimer((timer) => {
-        if(timer === 0) clearInterval(countRef.current) ;
+        if(timer <= 0) return clearInterval(countRef.current) ;
         return timer - 1;
       })
     }, 1000)
@@ -44,7 +44,8 @@ export const Poromodo = ({mins=25}) => {
     return (timer/period)*100;
   }
   const formatTime = () => {
-    if(timer <= 0) return "Done!!!";
+    console.log(timer);
+    if(timer <= 0 || timer === undefined) return "Done!!!";
 
     const getSeconds = `0${(timer % 60)}`.slice(-2);
     const minutes = `${Math.floor(timer / 60)}`;
@@ -68,7 +69,6 @@ export const Poromodo = ({mins=25}) => {
           <button onClick={handleReset} disabled={!isActive}>Reset</button>
         </div>
       </div>
-      {getPercentageArchived()}
     </div>
       <ProgressCircle
         color={"orange"}
