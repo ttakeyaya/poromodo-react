@@ -1,6 +1,6 @@
 backend(not yet)
   - with php(laravel)/ nodeJS(express)
-  - with MYSQL & MongoDB
+  - with MongoDB
      
 frontend(ongoing)
   - use react
